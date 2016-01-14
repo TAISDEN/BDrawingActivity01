@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#FFCCCCCC"
+              android:orientation="horizontal"
+              tools:context=".BDrawingActivity">
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/new_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:contentDescription="@string/start_new"
+            android:src="@drawable/new_pic"
+            android:onClick="NewButton"/>
+
+        <ImageButton
+            android:id="@+id/draw_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:contentDescription="@string/brush"
+            android:onClick="ChooseBrushSize"
+            android:src="@drawable/brush"/>
+
+        <ImageButton
+            android:id="@+id/PaintColor"
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="5dp"
+            android:background="#FF000000"
+            android:contentDescription="@string/paint"
+            android:onClick="ChooseColor"
+            android:src="@drawable/paint"/>
+
+        <ImageButton
+            android:id="@+id/erase_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:contentDescription="@string/erase"
+            android:onClick="EraseButton"
+            android:src="@drawable/eraser"/>
+
+        <ImageButton
+            android:id="@+id/save_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:contentDescription="@string/save"
+            android:src="@drawable/save"
+            android:onClick="SaveButton"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/testDisp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:visibility="gone"/>
+
+    <com.example.brian.bdrawingactivity01.DrawingView
+        android:id="@+id/drawing"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
+        android:background="#FFFFFFFF"/>
+</LinearLayout>
